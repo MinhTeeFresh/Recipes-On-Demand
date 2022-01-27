@@ -1,4 +1,4 @@
-# SA-Application
+# SE-Application
 
 This is a collaborative project for the semester assignment in **CS 3203**.
 
