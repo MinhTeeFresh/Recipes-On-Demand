@@ -1,0 +1,25 @@
+{
+  "name": "recipes-on-demand",
+  "version": "1.0.0",
+  "description": "Software development project Spring 2022",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MinhTeeFresh/Recipes-On-Demand.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MinhTeeFresh/Recipes-On-Demand/issues"
+  },
+  "homepage": "https://github.com/MinhTeeFresh/Recipes-On-Demand#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
