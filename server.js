@@ -9,7 +9,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser');
 
 // Read recipies
-const favs = require("/src/recipes/recipes.json");
+const favs = require("./src/recipes/recipes.json");
 
 // Use the body parser so we can read incoming json
 app.use(bodyParser.json())
