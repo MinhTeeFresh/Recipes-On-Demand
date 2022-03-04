@@ -22,6 +22,8 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/index.html'));
 })
 
+app.use(express.static('src'))
+
 // return recipes depending on recieved ingredient
 app.get('/get', function (req, res) {
   let ingredients = req.body
