@@ -1,1 +1,7 @@
-{}
+[{ 
+        "name" : "Vegetable Stew",
+        "ingredients" : ["butter", "carrot", "celery", "salt", "pepper", "garlic", "flour", "chicken", "thyme", "bay leaf", "potato", "chicken broth", "parsley"],
+        "steps" : ["In a large pot over medium heat, melt butter. Add carrots and celery and season with salt and pepper. Cook, stirring often, until vegetables are tender, about 5 minutes. Add garlic and cook until fragrant, about 30 seconds.", "Add flour and stir until vegetables are coated, then add chicken, thyme, bay leaf, potatoes, and broth. Season with salt and pepper. Bring mixture to a simmer and cook until the chicken is no longer pink and potatoes are tender, 15 minutes.", "Remove from heat and transfer chicken to a medium bowl. Using two forks, shred chicken into small pieces and return to pot. ", "Garnish with parsley before serving."],
+        "time" : 45,
+        "reference" : "https://www.delish.com/cooking/recipe-ideas/recipes/a55316/easy-chicken-stew-recipe/"
+}]
