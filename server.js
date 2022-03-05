@@ -5,41 +5,33 @@ const app = express()
 const port = 3000
 const path = require('path')
 const fs = require("fs");
-const cors = require('cors')
 const bodyParser = require('body-parser');
+app.use(express.static('src'))
 
 // Read recipies
-const favs = require("./src/recipes/recipes.json");
+let recipies = require("./src/recipes/recipes.json")
 
 // Use the body parser so we can read incoming json
 app.use(bodyParser.json())
 
-// Use cors to deal with security and middleware
-app.use(cors({origin: '*'}));
 
 // load html home page
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/index.html'));
 })
 
-app.use(express.static('src'))
 
 // return recipes depending on recieved ingredient
-app.get('/get', function (req, res) {
-  let ingredients = req.body
+app.post('/getRecognizedAndFailed', function (req, res) {
+  // Ingredients that the user sent
+  let givenList = req.body.ingredientsString.toLowerCase().trim().split(',')
+  let result = getRecongnizedAndFailed(givenList)
 
-  let listOfRecipies = []
-  let missSpelledList = []
-
-  // TODO algo to cross reference given ingredients to
-  // recipies
-
-  // TODO add miss spelled ingredients to list
-
-  // TODO return list of recipies and miss spelled list
+  // Ingredients that are in the recipies.json file
+  res.setHeader('Content-Type', 'application/json');
   res.json({
-    missSpelled: missSpelledList,
-    recipies: listOfRecipies
+    failed: result[0],
+    recognized: result[1]
   })
 
 });
@@ -47,3 +39,37 @@ app.get('/get', function (req, res) {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
+function getRecongnizedAndFailed(givenList) {
+  let list = getIngredients()
+  let failedList = []
+  let recognizedList = []
+
+  // function get get ingredients from recipies.json
+  function getIngredients() {
+    let ingredientsList = new Set()
+
+    for (let i = 0; i < recipies.length; i++) {
+      for (let ingredient of recipies[i].ingredients) {
+        ingredientsList.add(ingredient)
+      } 
+    }
+    return Array.from(ingredientsList)
+  }
+
+  // find intersection of both arrays, add to failed
+  // or reconginzed lists
+  for (let i = 0; i < givenList.length; i++) {
+    if (list.includes(givenList[i]) ||
+        list.includes(givenList[i] + 's') ||
+        list.includes(givenList[i] + 'es')) {
+          recognizedList.push(givenList[i])
+    }
+
+    else {
+      failedList.push(givenList[i])
+    }
+  }
+
+  return [failedList, recognizedList]
+}
