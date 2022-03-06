@@ -21,6 +21,8 @@ submitBtn.addEventListener('click', _ => {
     .then(response => { return response.json() })
     .then(data => {
         console.log(data)
+		alert(`Recognized Ingredients: ${data.recognized}`);
+		alert(`Unrecognized Ingredients: ${data.failed}`);
     })
     .catch(err => console.log(err))
 })

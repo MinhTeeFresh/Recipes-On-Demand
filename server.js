@@ -61,15 +61,22 @@ function getRecongnizedAndFailed(givenList) {
   // or reconginzed lists
   for (let i = 0; i < givenList.length; i++) {
     givenList[i] = givenList[i].trim()
-    if (list.includes(givenList[i]) ||
-        list.includes(givenList[i] + 's') ||
-        list.includes(givenList[i] + 'es')) {
-          recognizedList.push(givenList[i])
-    }
-
-    else {
-      failedList.push(givenList[i])
-    }
+	
+	let isInList = false;
+	for (let j = 0; j < list.length; j++) {
+		if (givenList[i] == list[j] ||
+			givenList[i] == list[j] + 's' ||
+			givenList[i] == list[j] + 'es')
+		{
+			isInList = true;
+		}
+	}
+	
+	if (isInList) {
+		recognizedList.push(givenList[i]);
+	} else {
+		failedList.push(givenList[i]);
+	}
   }
 
   return [failedList, recognizedList]
