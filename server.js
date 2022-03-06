@@ -60,6 +60,7 @@ function getRecongnizedAndFailed(givenList) {
   // find intersection of both arrays, add to failed
   // or reconginzed lists
   for (let i = 0; i < givenList.length; i++) {
+    givenList[i] = givenList[i].trim()
     if (list.includes(givenList[i]) ||
         list.includes(givenList[i] + 's') ||
         list.includes(givenList[i] + 'es')) {
