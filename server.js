@@ -68,13 +68,12 @@ function getRecongnizedAndFailed(givenList) {
 			givenList[i] == list[j] + 's' ||
 			givenList[i] == list[j] + 'es')
 		{
+			recognizedList.push(list[j]);
 			isInList = true;
 		}
 	}
 	
-	if (isInList) {
-		recognizedList.push(givenList[i]);
-	} else {
+	if (!isInList) {
 		failedList.push(givenList[i]);
 	}
   }
