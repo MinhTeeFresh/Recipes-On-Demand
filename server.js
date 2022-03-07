@@ -45,18 +45,6 @@ function getRecongnizedAndFailed(givenList) {
   let failedList = []
   let recognizedList = []
 
-  // function get get ingredients from recipies.json
-  function getIngredients() {
-    let ingredientsList = new Set()
-
-    for (let i = 0; i < recipies.length; i++) {
-      for (let ingredient of recipies[i].ingredients) {
-        ingredientsList.add(ingredient)
-      }
-    }
-    return Array.from(ingredientsList)
-  }
-
   // find intersection of both arrays, add to failed
   // or reconginzed lists
   for (let i = 0; i < givenList.length; i++) {
@@ -78,4 +66,16 @@ function getRecongnizedAndFailed(givenList) {
   }
 
   return [failedList, recognizedList]
+}
+
+// function get get ingredients from recipies.json
+function getIngredients() {
+  let ingredientsList = new Set()
+
+  for (let i = 0; i < recipies.length; i++) {
+    for (let ingredient of recipies[i].ingredients) {
+      ingredientsList.add(ingredient)
+    }
+  }
+  return Array.from(ingredientsList)
 }
