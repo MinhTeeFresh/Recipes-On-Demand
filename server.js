@@ -52,7 +52,7 @@ function getRecongnizedAndFailed(givenList) {
     for (let i = 0; i < recipies.length; i++) {
       for (let ingredient of recipies[i].ingredients) {
         ingredientsList.add(ingredient)
-      } 
+      }
     }
     return Array.from(ingredientsList)
   }
@@ -61,21 +61,20 @@ function getRecongnizedAndFailed(givenList) {
   // or reconginzed lists
   for (let i = 0; i < givenList.length; i++) {
     givenList[i] = givenList[i].trim()
-	
-	let isInList = false;
-	for (let j = 0; j < list.length; j++) {
-		if (givenList[i] == list[j] ||
-			givenList[i] == list[j] + 's' ||
-			givenList[i] == list[j] + 'es')
-		{
-			recognizedList.push(list[j]);
-			isInList = true;
-		}
-	}
-	
-	if (!isInList) {
-		failedList.push(givenList[i]);
-	}
+
+    let isInList = false;
+    for (let j = 0; j < list.length; j++) {
+      if (givenList[i] == list[j] ||
+        givenList[i] == list[j] + 's' ||
+        givenList[i] == list[j] + 'es') {
+        recognizedList.push(list[j]);
+        isInList = true;
+      }
+    }
+
+    if (!isInList) {
+      failedList.push(givenList[i]);
+    }
   }
 
   return [failedList, recognizedList]
