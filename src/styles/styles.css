@@ -5,12 +5,13 @@ html {
     justify-content: center;
 }
 
-/* .box-one {
-    width: 1800px;
+body {
+    width: 1300px;
     height: 1000px;
     align-content: center;
+    justify-content: center;
     background-color: white;
-} */
+}
 
 
 .box-two {
@@ -25,6 +26,7 @@ html {
 }
 
 .box {
+    left: 23%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,8 +51,8 @@ html {
     }
   
     to {
-      margin-left: -8.5%;
-      width: 117%;
+      margin-left: 0%;
+      width: 54%;
     }
   }
 
