@@ -6,7 +6,8 @@ html {
 }
 
 body {
-    width: 1300px;
+    /* width: 1300px; */
+    width: 90%;
     height: 1000px;
     align-content: center;
     justify-content: center;
