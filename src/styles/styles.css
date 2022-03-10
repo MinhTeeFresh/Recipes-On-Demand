@@ -3,39 +3,40 @@ html {
     text-align: center;
     display: flex;
     justify-content: center;
+    height: 100%;
 }
 
-body {
-    /* width: 1300px; */
+ body {
     width: 90%;
-    height: 1000px;
+    display:flex;
+    flex-direction: column;
+    height: max-content;
     align-content: center;
+    text-align: center;
     justify-content: center;
     background-color: white;
-}
+    position: relative;
+} 
 
-
-.box-two {
-    margin: 20px;
-}
-
-#userFill {
-    height: 30px;
-    width: 500px;
-    font-size: 14pt;
-    margin-bottom: 20px;
+body h1 {
+    font-size: 500%;
+    border-top: 50px;
+    border-bottom: 2px;
+    border: 10px solid orange;
+    /* border-bottom: 5px solid orange; */
 }
 
 .box {
-    left: 23%;
+    /* left: 32%; */
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: auto;
+    font-size: 2rem;
     position: relative;
-    width: 700px;
-    height: 300px;
+    width: 90%;
+    height: 30%;
     background-color: white;
     border: 1px solid rgba(59, 58, 58, 0.4);
     box-shadow: -10px 5px 10px grey;
@@ -45,6 +46,16 @@ body {
     animation-iteration-count: 1;
 }
 
+#userFill {
+    height: 15%;
+    width: 100%;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14pt;
+    resize: none;
+}
+
 @keyframes slidein {
     from {
       margin-left: 500%;
@@ -52,15 +63,16 @@ body {
     }
   
     to {
-      margin-left: 0%;
-      width: 54%;
+      margin-left: 5%;
+      width: 90%;
     }
   }
 
 #submitBtn {
-    padding: 15px 15px;
+    padding: 5% 15px;
     position: relative;
-    margin-top: 40px;
+    margin-top: 2%;
+    margin-bottom: 2%;
     top: 0;
     font-weight: bold;
     font-size: 20pt;
@@ -75,4 +87,62 @@ body {
 #submitBtn:hover {
     top: -5px;
     background-color: grey;
+}
+
+.box-two {
+    position: relative;
+    /* left: 7%; */
+    /* width: 75%; */
+    width: auto;
+    border: 1px solid black;
+    box-shadow: -10px 5px 10px grey;
+    border-radius: 20px;
+    background-color: grey;
+    margin: 5%;
+}
+
+.row-one {
+    padding-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.listed {
+    width: 300px;
+  border: 5px solid black;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 10%;
+  background-color: white;
+}
+
+.missing {
+    width: 300px;
+  border: 5px solid black;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 10%;
+  background-color: white;
+}
+
+.image {
+    width: 300px;
+  border: 5px solid black;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 10%;
+  background-color: white;
+}
+
+.instructions {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    justify-content: center;
+  border: 5px solid black;
+  border-radius: 20px;
+  padding: 50px;
+  margin: 20px;
+  background-color: white;
 }
