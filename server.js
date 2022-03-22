@@ -31,7 +31,7 @@ app.post('/getRecognizedAndFailed', function (req, res) {
   res.setHeader('Content-Type', 'application/json');
   res.json({
     failed: result[0],
-    recognized: result[1]
+    matched: result[1]
   })
 
 });
