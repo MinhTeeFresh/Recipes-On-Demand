@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/scripts/Scripts.js"></script>
     <!-- <script src="/server.js"></script> -->
     <title id="title">Recipe's on Demand</title>
 </head>
@@ -28,20 +30,32 @@
             <button id="submitBtn" type="button">DEMAND!!</button>
         </form>
     </div> 
-        <div class="box-two">
+        <div class="box-two" id="recipeContainer">
+            <div id="error">
+                Error
+            </div>
             <div class="row-one">
-                <div class="listed">
+                <div id="listed">
                     Listed Ingredients
+                    <ul id="recipeIngredients">
+
+                    </ul>
                 </div>
-                <div class="missing">
+                <div id="missing">
                     Missing Ingredients
+                    <ul id="groceryList">
+
+                    </ul>
                 </div>
-                <div class="image">
+                <div id="image">
                     Picture
                 </div>
             </div>
-            <div class="instructions">
+            <div id="instructions">
                 Instructions
+                <ol id="steps">
+
+                </ol>
             </div>
         </div>
     </div>

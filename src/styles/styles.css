@@ -16,6 +16,7 @@ html {
     justify-content: center;
     background-color: white;
     position: relative;
+    padding-bottom: 4.5%;
 } 
 
 body h1 {
@@ -108,7 +109,19 @@ body h1 {
     justify-content: center;
 }
 
-.listed {
+#error {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    justify-content: center;
+    border: 5px solid black;
+    border-radius: 20px;
+    margin: 1%;
+    padding: 1%;
+    background-color: white;
+}
+
+#listed {
     width: 300px;
   border: 5px solid black;
   border-radius: 20px;
@@ -117,7 +130,7 @@ body h1 {
   background-color: white;
 }
 
-.missing {
+#missing {
     width: 300px;
   border: 5px solid black;
   border-radius: 20px;
@@ -126,7 +139,7 @@ body h1 {
   background-color: white;
 }
 
-.image {
+#image {
     width: 300px;
   border: 5px solid black;
   border-radius: 20px;
@@ -135,7 +148,7 @@ body h1 {
   background-color: white;
 }
 
-.instructions {
+#instructions {
     display: flex;
     flex-direction: row;
     flex: auto;
