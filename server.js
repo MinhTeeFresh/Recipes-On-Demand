@@ -33,8 +33,27 @@ app.post('/getRecognizedAndFailed', function (req, res) {
     failed: result[0],
     matched: result[1]
   })
-
 });
+
+app.post('/getAll', (req, res) => {
+  let givenList = req.body.ingredientsString.toLowerCase().trim().split(',')
+  let recongnizedAndFailed = getRecongnizedAndFailed(givenList)
+
+  let allMatched = recongnizedAndFailed[1]
+  let failed = recongnizedAndFailed[0]
+  let recipe = matchRecipe(allMatched)
+  let matched = getMatchedandUnmatched(recipe, allMatched)[0]
+  let unmatched = getMatchedandUnmatched(recipe, allMatched)[1]
+
+
+  res.setHeader('Content-Type', 'application/json');
+  res.json({
+    recipe: recipe,
+    failed: failed,
+    matched: matched,
+    unmatched: unmatched,
+  })
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
@@ -78,4 +97,58 @@ function getIngredients() {
     }
   }
   return Array.from(ingredientsList)
+}
+
+// fimd recipe with most ingriedient matches
+function matchRecipe(allMatched = []) {
+  let recipe = null
+  let max = 0
+
+  // brute force O(n*p*m) algorithm
+  // go through recipes in json
+  for (let i = 0; i < recipies.length; i++) {
+    let currMax = 0
+    // go through each ingredients in that recipe
+    for (let ingredient of recipies[i].ingredients) {
+      // go through given allMatched ingriednts list
+      for (let j = 0; j < allMatched.length; j++) {
+        if (allMatched[j] == ingredient) {
+          currMax += 1
+          break;
+        }
+      }
+
+      if (currMax > max) {
+        max = currMax
+        recipe = recipies[i]
+      }
+    }
+  }
+
+  return recipe
+}
+
+function getMatchedandUnmatched(recipe = new Object(), allMatched = []) {
+  let matched = []
+  let unmatched = []
+  for (let ingredient of recipe.ingredients) {
+    let contains = false
+
+
+    for (let i = 0; i < allMatched.length; i++) {
+      if (allMatched[i] == ingredient) {
+        contains = true
+        break
+      }
+    }
+
+    if (contains) {
+      matched.push(ingredient)
+    }
+    else {
+      unmatched.push(ingredient)
+    }   
+  }
+
+  return [matched, unmatched]
 }
