@@ -12,23 +12,23 @@ $(document).ready(function() {
             data: $(userFill).val(),
             contentType: 'application/json',
             success: function (response) {
-                var error = $();
-                var ingredient = $();
-				var grocery = $();
-                var image = $();
-                var instruction = $();
+                // var error = $();
+                // var ingredient = $();
+				// var grocery = $();
+                // var image = $();
+                // var instruction = $();
 
-                tbodyEL.html('');
+                // tbodyEL.html('');
 
-                let tweet_data = '';
-                $.each(data, function (key, value) {
-                    tweet_data += '<tr>';
-                    tweet_data += '<td>' + value.created_at + '</td>';
-                    tweet_data += '<td>' + value.text + '</td>';
-                    tweet_data += '<td>' + value.id + '</td>';
-                    tweet_data += '</tr>';
-                });
-                $('#tweetTable').append(tweet_data);
+                // let tweet_data = '';
+                // $.each(data, function (key, value) {
+                //     tweet_data += '<tr>';
+                //     tweet_data += '<td>' + value.created_at + '</td>';
+                //     tweet_data += '<td>' + value.text + '</td>';
+                //     tweet_data += '<td>' + value.id + '</td>';
+                //     tweet_data += '</tr>';
+                // });
+                // $('#tweetTable').append(tweet_data);
 			}
         })
 
