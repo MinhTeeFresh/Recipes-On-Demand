@@ -111,6 +111,19 @@ body h1 {
     align-items: center;
 }
 
+#recipeTitle {
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+  justify-content: center;
+  border: 5px solid black;
+  border-radius: 20px;
+  margin: 1%;
+  padding: 3%;
+  background-color: white;
+  font-size: 45pt;
+}
+
 #error {
     display: flex;
     flex-direction: row;
