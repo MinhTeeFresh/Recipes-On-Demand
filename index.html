@@ -12,15 +12,25 @@
 </head>
 <body>
     <div class="box-one">
-        <!-- <img src=""> -->
     <h1>Recipe's On Demand</h1>
     <div class="box">
         <form>
             <table style="margin-left:auto; margin-right:auto;">
-                <p>Spell yo' stuff correctly; we will sue you
-                Make sure to add yo ", " in betweet ingredients</p>
+                <div id="prompt">
+                    <p>Welcome to Recipes On Demand!</p>
+                    <p>To get started, type in your ingredients in the box below
+                        and seperate the ingredients with a comma and a space
+                        (ie. squash, tomatoes, ...).
+                    </p>
+                    <p>Our program will do all the hard work of finding a recipe
+                        for you and show it below. The recipe will even give you a grocery list
+                        of ingredients you may need! Just type in your ingredients and press the
+                        "Demand" button below.
+                    </p>
+                </div>
                 <tr>
-                    <td><label>Put yo' Ingredients Here:</label></td>
+                    <td><label>Ready to get started? Put your ingredients here:</label></td>
+                </br>
                     
                 </tr>
                 <tr>
@@ -34,15 +44,21 @@
             <div id="recipeTitle">
                 Title
             </div>
+            <div id="time">
+                Estimated time:&nbsp;
+                <div id="timeFill">
+
+                </div>
+            </div>
             <div id="error">
-                Error Ingredients:&nbsp;
+                Unrecognized Ingredients:&nbsp;
                 <div id="errorIngredients">
 
                 </div>
             </div>
             <div class="row-one">
                 <div id="listed">
-                    Ingredients:
+                    Matching Ingredients:
                     <ul id="recipeIngredients">
                         
                     </ul>
@@ -58,7 +74,7 @@
                 </div>
             </div>
             <div id="instructions">
-                Instructions
+                Instructions:
                 <ol id="steps">
 
                 </ol>

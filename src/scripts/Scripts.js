@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+	// Hide The recipe box to start
     $('#recipeContainer').hide();
 
     // POST
@@ -7,6 +8,9 @@ $(document).ready(function() {
         $('#recipeContainer').show();
 
         let ingredients = $("#userFill").val();
+		if(ingredients == null) {
+			alert("You must fill out the ingredient field");
+		}
 		
 		$.ajax({
 			url: "/getAll",
@@ -16,15 +20,17 @@ $(document).ready(function() {
 			success: function (response) {
 				console.log(response);
 				
-				alert(`Matches: ${response.matched}`);
-				alert(`Fails: ${response.failed}`);
+				// alert(`Matches: ${response.matched}`);
+				// alert(`Fails: ${response.failed}`);
 
+				// Setting Field variables
 				var error = $('#errorIngredients');
 				var recipeIngredients = $('#recipeIngredients');
 				var groceryList = $('#groceryList');
 				var image = $('#image');
 				var steps = $('#steps');
 				var name = $('#recipeTitle');
+				var time = $('#timeFill');
 
 				// Clearing out all previous entries
                 error.html('');
@@ -33,6 +39,7 @@ $(document).ready(function() {
 				image.html('');
 				steps.html('');
 				name.html('');
+				time.html('');
 
 				// Filling/Appending the matched ingredients
 				let data = '';
@@ -55,7 +62,11 @@ $(document).ready(function() {
 				name.append(response.recipe.name);
 
 				// Filling in recipe steps
-				steps.append(response.recipe.steps);
+				data = '';
+				for(let i = 0; i < response.recipe.steps.length; i++) {
+					data += '<li>' + response.recipe.steps[i] + '</li>';
+				}
+                steps.append(data);
 
 				// Filling in all unmatched entries
 				data = '';
@@ -64,11 +75,15 @@ $(document).ready(function() {
 				}
                 groceryList.append(data);
 
-				// Inserting the image
-				
+				// Insert Estimated time of recipe
+				time.append(response.recipe.time + " minutes");
+
+				// Inserting the image TODO
+
 			}
 		});
 
+		
 
         //Get user ingredients
 

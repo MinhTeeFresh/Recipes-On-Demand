@@ -25,12 +25,16 @@ body h1 {
     border-top: 50px;
     border-bottom: 2px;
     border: 10px solid orange;
-    /* border-bottom: 5px solid orange; */
 }
 
 .box {
-    /* left: 32%; */
     margin: auto;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    padding-right: 3%;
+    padding-left: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,11 +43,11 @@ body h1 {
     position: relative;
     width: 90%;
     height: 30%;
-    background-color: white;
+    background-color: rgb(248, 248, 248);
     border: 1px solid rgba(59, 58, 58, 0.4);
     box-shadow: -10px 5px 10px grey;
     border-radius: 20px;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
     animation-name: slidein;
     animation-iteration-count: 1;
 }
@@ -83,6 +87,7 @@ body h1 {
     box-shadow: -10px 5px 10px grey;
     border-radius: 20px;
     transition: top ease 0.5s;
+    width:25%;
 
 }
 
@@ -93,8 +98,6 @@ body h1 {
 
 .box-two {
     position: relative;
-    /* left: 7%; */
-    /* width: 75%; */
     width: auto;
     border: 1px solid black;
     box-shadow: -10px 5px 10px grey;
@@ -124,6 +127,18 @@ body h1 {
   font-size: 45pt;
 }
 
+#time {
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+  justify-content: center;
+  border: 5px solid black;
+  border-radius: 20px;
+  margin: 1%;
+  padding: 3%;
+  background-color: white;
+  font-size: 25pt;
+}
 #error {
     display: flex;
     flex-direction: row;
@@ -132,13 +147,13 @@ body h1 {
     border: 5px solid black;
     border-radius: 20px;
     margin: 1%;
-    padding: 5%;
+    padding: 2%;
     background-color: white;
     font-size: 25pt;
 }
 
 #listed {
-    width: 30%;
+  width: 30%;
   border: 5px solid black;
   border-radius: 20px;
   margin: 20px;
@@ -148,7 +163,7 @@ body h1 {
 }
 
 #missing {
-    width: 30%;
+  width: 30%;
   border: 5px solid black;
   border-radius: 20px;
   margin: 20px;
@@ -158,8 +173,8 @@ body h1 {
 }
 
 #image {
-    width: 50%;
-    height: 50%;
+  width: 50%;
+  height: 50%;
   border: 5px solid black;
   border-radius: 20px;
   margin: 20px;
@@ -167,16 +182,11 @@ body h1 {
   background-color: white;
 }
 
-#test {
-  width: 100%;
-  height: auto;
-}
-
 #instructions {
-    display: flex;
-    flex-direction: row;
-    flex: auto;
-    justify-content: left;
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+  justify-content: left;
   border: 5px solid black;
   border-radius: 20px;
   padding: 50px;
