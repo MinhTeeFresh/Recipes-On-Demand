@@ -31,6 +31,7 @@ $(document).ready(function() {
 				var steps = $('#steps');
 				var name = $('#recipeTitle');
 				var time = $('#timeFill');
+				var source = $('#source');
 
 				// Clearing out all previous entries
                 error.html('');
@@ -40,6 +41,7 @@ $(document).ready(function() {
 				steps.html('');
 				name.html('');
 				time.html('');
+				source.html('');
 
 				// Filling/Appending the matched ingredients
 				let data = '';
@@ -79,7 +81,9 @@ $(document).ready(function() {
 				time.append(response.recipe.time + " minutes");
 
 				// Inserting the image TODO
+				// image.append('<image src="' + response.recipe.image + '"></image>')
 
+				source.append(response.recipe.reference);
 			}
 		});
 
