@@ -3,18 +3,21 @@
 	"ingredients" : ["butter", "carrot", "celery", "salt", "pepper", "garlic", "flour", "chicken", "thyme", "bay leaf", "potato", "chicken broth", "parsley"],
 	"steps" : ["In a large pot over medium heat, melt butter. Add carrots and celery and season with salt and pepper. Cook, stirring often, until vegetables are tender, about 5 minutes. Add garlic and cook until fragrant, about 30 seconds.", "Add flour and stir until vegetables are coated, then add chicken, thyme, bay leaf, potatoes, and broth. Season with salt and pepper. Bring mixture to a simmer and cook until the chicken is no longer pink and potatoes are tender, 15 minutes.", "Remove from heat and transfer chicken to a medium bowl. Using two forks, shred chicken into small pieces and return to pot. ", "Garnish with parsley before serving."],
 	"time" : 45,
-	"reference" : "https://www.delish.com/cooking/recipe-ideas/recipes/a55316/easy-chicken-stew-recipe/"
+	"reference" : "https://www.delish.com/cooking/recipe-ideas/recipes/a55316/easy-chicken-stew-recipe/",
+	"image" : ""
 }, {
 	"name" : "Fried Rice",
 	"ingredients" : ["butter", "egg", "carrot", "onion", "pea", "garlic", "salt", "pepper", "rice", "green onion", "soy sauce", "oyster sauce", "sesame oil"],
 	"steps" : ["Heat 1/2 tablespoon of butter in a large sauté pan over medium-high heat until melted. Add egg, and cook until scrambled, stirring occasionally. Remove egg, and transfer to a separate plate.", "Add an additional 1 tablespoon butter to the pan and heat until melted. Add carrots, onion, peas and garlic, and season with a generous pinch of salt and pepper. Sauté for about 5 minutes or until the onion and carrots are soft. Increase heat to high, add in the remaining 1 1/2 tablespoons of butter, and stir until melted. Immediately add the rice, green onions, soy sauce and oyster sauce (if using), and stir until combined. Continue sautéing for an additional 3 minutes to fry the rice, stirring occasionally.  (I like to let the rice rest for a bit between stirs so that it can crisp up on the bottom.)  Then add in the eggs and stir to combine. Remove from heat, and stir in the sesame oil until combined.  Taste and season with extra soy sauce, if needed.", "Serve immediately, or refrigerate in a sealed container for up to 3 days."],
 	"time" : 15,
-	"reference" : "https://www.gimmesomeoven.com/fried-rice-recipe/"
+	"reference" : "https://www.gimmesomeoven.com/fried-rice-recipe/",
+	"image" : ""
 }, {
 	"name" : "Thanksgiving Dressing",
 	"ingredients" : ["butter", "bread", "onions", "celery", "parsley", "sage", "rosemary", "thyme", "salt", "pepper", "chicken broth", "vegetable broth", "egg"],
 	"steps" : ["Preheat oven to 250°F. Butter a 13x9x2 inch baking dish and set aside. Scatter bread in a single layer on a rimmed baking sheet. Bake, stirring occasionally, until dried out, about 1 hour. Let cool; transfer to a very large bowl.", "Meanwhile, melt ¾ cup butter in a large skillet over medium-high heat; add onions and celery. Stir often until just beginning to brown, about 10 minutes. Add to bowl with bread; stir in herbs, salt, and pepper. Drizzle in 1¼ cups broth and toss gently. Let cool.", "Preheat oven to 350°F. Whisk 1¼ cups broth and eggs in a small bowl. Add to bread mixture; fold gently until thoroughly combined. Transfer to prepared dish, cover with foil, and bake until an instant-read thermometer inserted into the center of dressing registers 160°F, about 40 minutes. DO AHEAD: Dressing can be made one day ahead up to this point. Uncover the dressing, let cool, then cover again and chill. The next day, proceed with the final bake as described below.", "Uncover dressing and continue to bake until set and top is golden brown and crisp, 40–45 minutes longer (if chilled, add 10–15 minutes for a total time of 1 hour 30 minutes–1 hour 40 minutes)."],
 	"time" : 180,
-	"reference" : "https://www.epicurious.com/recipes/food/views/simple-is-best-dressing-51124210"
+	"reference" : "https://www.epicurious.com/recipes/food/views/simple-is-best-dressing-51124210",
+	"image" : ""
 }
 ]
