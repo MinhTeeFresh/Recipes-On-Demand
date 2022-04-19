@@ -3,14 +3,31 @@ $(document).ready(function() {
 	// Hide The recipe box to start
     $('#recipeContainer').hide();
 
+	$('#submitBtn').on('click', function() {
+		if($("#userFill").val() == "") {
+			$(".overlay, .popUp").addClass("active");
+		}
+		else {
+			buildTable();
+		}
+	})
+
+	$('#popBtn').on('click', function() {
+		$(".overlay, .popUp").removeClass("active");
+	})
+
+	$('#popBtn2').on('click', function() {
+		$(".overlay, .popUp2").removeClass("active");
+	})
+
+	$(".arrow").click(function(){
+		$("#prompt").slideToggle("slow");
+	});
+
     // POST
-    $('#submitBtn').on('click', function() {
-        $('#recipeContainer').show();
+	function buildTable() {
 
         let ingredients = $("#userFill").val();
-		if(ingredients == null) {
-			alert("You must fill out the ingredient field");
-		}
 		
 		$.ajax({
 			url: "/getAll",
@@ -18,82 +35,76 @@ $(document).ready(function() {
 			data: JSON.stringify({ ingredientsString : ingredients }),
 			contentType: 'application/json',
 			success: function (response) {
-				console.log(response);
-				
-				// alert(`Matches: ${response.matched}`);
-				// alert(`Fails: ${response.failed}`);
-
-				// Setting Field variables
-				var error = $('#errorIngredients');
-				var recipeIngredients = $('#recipeIngredients');
-				var groceryList = $('#groceryList');
-				var image = $('#image');
-				var steps = $('#steps');
-				var name = $('#recipeTitle');
-				var time = $('#timeFill');
-				var source = $('#source');
-
-				// Clearing out all previous entries
-                error.html('');
-				recipeIngredients.html('');
-				groceryList.html('');
-				image.html('');
-				steps.html('');
-				name.html('');
-				time.html('');
-				source.html('');
-
-				// Filling/Appending the matched ingredients
-				let data = '';
-				for(let i = 0; i < response.matched.length; i++) {
-					data += '<li>' + response.matched[i] + '</li>';
+				if($.trim(response) == '') {
+					$(".overlay, .popUp2").addClass("active");
 				}
-                recipeIngredients.append(data);
+				else {
+					$('#recipeContainer').slideDown("slow");
 
-				// Filling in all error/failed entries
-				data = '';
-				if (response.failed[0] != null) {
-					data += response.failed[0];
-				 }
-				for(let i = 1; i < response.failed.length; i++) {
-					data += ', ' + response.failed[i];
+					// Setting Field variables
+					var error = $('#errorIngredients');
+					var recipeIngredients = $('#recipeIngredients');
+					var groceryList = $('#groceryList');
+					var image = $('#image');
+					var steps = $('#steps');
+					var name = $('#recipeTitle');
+					var time = $('#timeFill');
+					var source = $('#source');
+
+					// Clearing out all previous entries
+					error.html('');
+					recipeIngredients.html('');
+					groceryList.html('');
+					image.html('');
+					steps.html('');
+					name.html('');
+					time.html('');
+					source.html('');
+
+					// Filling/Appending the matched ingredients
+					let data = '';
+					for(let i = 0; i < response.matched.length; i++) {
+						data += '<li>' + response.matched[i] + '</li>';
+					}
+					recipeIngredients.append(data);
+
+					// Filling in all error/failed entries
+					data = '';
+					if (response.failed[0] != null) {
+						data += response.failed[0];
+					}
+					for(let i = 1; i < response.failed.length; i++) {
+						data += ', ' + response.failed[i];
+					}
+					error.append(data);
+
+					// Entering name into box
+					name.append(response.recipe.name);
+
+					// Filling in recipe steps
+					data = '';
+					for(let i = 0; i < response.recipe.steps.length; i++) {
+						data += '<li>' + response.recipe.steps[i] + '</li>';
+					}
+					steps.append(data);
+
+					// Filling in all unmatched entries
+					data = '';
+					for(let i = 0; i < response.unmatched.length; i++) {
+						data += '<li>' + response.unmatched[i] + '</li>';
+					}
+					groceryList.append(data);
+
+					// Insert Estimated time of recipe
+					time.append(response.recipe.time + " minutes");
+
+					// Inserting the image TODO
+					image.append('<image id="foodView" src="' + response.recipe.image + '"></image>')
+
+					// Adding the source to the end of the page
+					source.append(response.recipe.reference);
 				}
-                error.append(data);
-
-				// Entering name into box
-				name.append(response.recipe.name);
-
-				// Filling in recipe steps
-				data = '';
-				for(let i = 0; i < response.recipe.steps.length; i++) {
-					data += '<li>' + response.recipe.steps[i] + '</li>';
-				}
-                steps.append(data);
-
-				// Filling in all unmatched entries
-				data = '';
-				for(let i = 0; i < response.unmatched.length; i++) {
-					data += '<li>' + response.unmatched[i] + '</li>';
-				}
-                groceryList.append(data);
-
-				// Insert Estimated time of recipe
-				time.append(response.recipe.time + " minutes");
-
-				// Inserting the image TODO
-				// image.append('<image src="' + response.recipe.image + '"></image>')
-
-				source.append(response.recipe.reference);
 			}
 		});
-
-		
-
-        //Get user ingredients
-
-
-        //send user ingredients
-
-        //response = recipe
-    })
+    }
 })

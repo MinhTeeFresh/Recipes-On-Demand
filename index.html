@@ -12,21 +12,24 @@
 </head>
 <body>
     <div class="box-one">
-    <h1>Recipe's On Demand</h1>
+    <h1>Recipes On Demand</h1>
     <div class="box">
         <form>
             <table style="margin-left:auto; margin-right:auto;">
+                <p>Welcome to Recipes On Demand!</p>
+                <div class="arrow"></div>
                 <div id="prompt">
-                    <p>Welcome to Recipes On Demand!</p>
-                    <p>To get started, type your ingredients into the box below
-                        and seperate the ingredients with a comma and a space
-                        (For example: squash, tomatoes, ...).
-                    </p>
-                    <p>Our program will do the hard work of finding a recipe
-                        for you and show it below. The recipe will give you a grocery list
-                        of ingredients you may need! Just type in your ingredients and press the
-                        "Demand" button below.
-                    </p>
+                    <div>
+                        <p>To get started, type your ingredients into the box below
+                            and seperate the ingredients with a comma and a space
+                            (For example: squash, tomatoes, ...).
+                        </p>
+                        <p>Our program will do the hard work of finding a recipe
+                            for you and show it below. The recipe will give you a grocery list
+                            of ingredients you may need! Just type in your ingredients and press the
+                            "Demand" button below.
+                        </p>
+                    </div>
                 </div>
                 <tr>
                     <td><label>Ready to get started? Put your ingredients here:</label></td>
@@ -88,5 +91,16 @@
             works will have some reference to their original source included closely to where these non-original 
             works are used." </p>
     </div>
+    <div class= "overlay"></div>
+        <div class = "popUp">
+            <h2>You must fill in the Ingredients box</h2>
+            <button id='popBtn' type=button>OK</button>
+        </div>
+        <div class = "popUp2">
+            <h2>No recipes matched with these ingredients</h2>
+            <button id='popBtn2' type=button>OK</button>
+        </div>
+    </div>
+    
 </body>
 </html>
