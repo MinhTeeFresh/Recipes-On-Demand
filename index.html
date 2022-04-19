@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,39 +11,41 @@
     <!-- <script src="/server.js"></script> -->
     <title id="title">Recipe's on Demand</title>
 </head>
+
 <body>
     <div class="box-one">
-    <h1>Recipes On Demand</h1>
-    <div class="box">
-        <form>
-            <table style="margin-left:auto; margin-right:auto;">
-                <p>Welcome to Recipes On Demand!</p>
-                <div class="arrow"></div>
-                <div id="prompt">
-                    <div>
-                        <p>To get started, type your ingredients into the box below
-                            and seperate the ingredients with a comma and a space
-                            (For example: squash, tomatoes, ...).
-                        </p>
-                        <p>Our program will do the hard work of finding a recipe
-                            for you and show it below. The recipe will give you a grocery list
-                            of ingredients you may need! Just type in your ingredients and press the
-                            "Demand" button below.
-                        </p>
+        <h1>Recipes On Demand</h1>
+        <div class="box">
+            <form>
+                <table style="margin-left:auto; margin-right:auto;">
+                    <p>Welcome to Recipes On Demand!</p>
+                    <div class="arrow"></div>
+                    <div id="prompt">
+                        <div>
+                            <p>To get started, type your ingredients into the box below
+                                and seperate the ingredients with a comma and a space
+                                (For example: squash, tomatoes, ...).
+                            </p>
+                            <p>Our program will do the hard work of finding a recipe
+                                for you and show it below. The recipe will give you a grocery list
+                                of ingredients you may need! Just type in your ingredients and press the
+                                "Demand" button below.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <tr>
-                    <td><label>Ready to get started? Put your ingredients here:</label></td>
-                </br>
-                    
-                </tr>
-                <tr>
-                    <td><textarea rows="4" cols="50" class="form-control" type="text" name="userFill" id="userFill" placeholder="Enter your list of ingredients here" required></textarea></td>
-                </tr>
-            </table>
-            <button id="submitBtn" type="button">DEMAND!!</button>
-        </form>
-    </div> 
+                    <tr>
+                        <td><label>Ready to get started? Put your ingredients here:</label></td>
+                        </br>
+
+                    </tr>
+                    <tr>
+                        <td><textarea rows="4" cols="50" class="form-control" type="text" name="userFill" id="userFill"
+                                placeholder="Enter your list of ingredients here" required></textarea></td>
+                    </tr>
+                </table>
+                <button id="submitBtn" type="button">DEMAND!!</button>
+            </form>
+        </div>
         <div class="box-two" id="recipeContainer">
             <div id="recipeTitle">
                 Title
@@ -63,7 +66,7 @@
                 <div id="listed">
                     Matching Ingredients:
                     <ul id="recipeIngredients">
-                        
+
                     </ul>
                 </div>
                 <div id="missing">
@@ -73,7 +76,7 @@
                     </ul>
                 </div>
                 <div id="image">
-                    
+
                 </div>
             </div>
             <div id="instructions">
@@ -85,22 +88,23 @@
             source:&nbsp;
             <p id="source"></p>
         </div>
-        <p>"Disclaimer: This product makes use of several copyrighted materials. The intended purpose of this 
-            product is to satisfy the final project requirements of CS 3203 of Spring 2022 as a practical and 
-            academic exercise. This product is not for public release or for commercial use. All non-original 
-            works will have some reference to their original source included closely to where these non-original 
+        <p>"Disclaimer: This product makes use of several copyrighted materials. The intended purpose of this
+            product is to satisfy the final project requirements of CS 3203 of Spring 2022 as a practical and
+            academic exercise. This product is not for public release or for commercial use. All non-original
+            works will have some reference to their original source included closely to where these non-original
             works are used." </p>
     </div>
-    <div class= "overlay"></div>
-        <div class = "popUp">
-            <h2>You must fill in the Ingredients box</h2>
-            <button id='popBtn' type=button>OK</button>
-        </div>
-        <div class = "popUp2">
-            <h2>No recipes matched with these ingredients</h2>
-            <button id='popBtn2' type=button>OK</button>
-        </div>
+    <div class="overlay"></div>
+    <div class="popUp">
+        <h2>You must fill in the Ingredients box</h2>
+        <button id='popBtn' type=button>OK</button>
     </div>
-    
+    <div class="popUp2">
+        <h2>No recipes matched with these ingredients</h2>
+        <button id='popBtn2' type=button>OK</button>
+    </div>
+    </div>
+
 </body>
+
 </html>
