@@ -18,9 +18,10 @@ To run locally, fork the repo and run `npm install` then `npm start`.
 - Unrecognized Ingredients: Input that could not be parsed to an ingredient the server recognizes.
 
 ## Usage
-![Alt Text](https://imgur.com/a/RSn99Mg.gif)
-
 - Enter a list of ingredients seperated by commas and hit demand.
+
+![Alt Text](https://media2.giphy.com/media/QRptO8Fkzyz5lhnKAt/giphy.gif?cid=790b76113a459a931601fe993fe12a6dd66f1cf15e00dfa3&rid=giphy.gif)
+
 
 A collaboration An Nguyen, Minh Tran, and Najaf Ali.
 
