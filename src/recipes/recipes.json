@@ -26,5 +26,42 @@
 	"time" : 180,
 	"reference" : "https://www.epicurious.com/recipes/food/views/simple-is-best-dressing-51124210",
 	"image" : "https://assets.epicurious.com/photos/59bc186dbf70cb1b35bc3e22/1:1/w_1920,c_limit/SIMPLE-IS-BEST-DRESSING-RECIPE-07092017.jpg"
+}, {
+	"name" : "Cheesecake",
+	"ingredients" : ["graham cracker", "butter", "sugar", "cream cheese", "sour cream", "egg", "vanilla extract", "heavy cream"],
+	"steps" : ["Position a rack in the middle of the oven and preheat to 350 degrees F.",
+		"To make the crust: In a small bowl, mix the cracker crumbs with the melted butter and the sugar together until evenly moistened. Press the crumb mixture onto the bottom of a 9-inch springform pan. Bake the crust until golden brown, about 10 to 12 minutes. Cool the pan on a rack.",
+		"Lower the oven temperature to 325 degrees F. In the bowl of a standing mixer fitted with the paddle attachment, or with a hand-held mixer, cream the cream cheese on medium speed until smooth. Gradually add the sugar and beat until light and fluffy. (Stop mixing and scrape down the sides of the bowl and beaters as needed.) Beat in the sour cream. Add the eggs, one at a time, beating well after each addition. Stir in the vanilla and cream. Pour the batter into the prepared pan.",
+		"Bake until the top of the cheesecake is lightly browned, but the center still jiggles slightly, about 45 minutes. Cool the cake in the pan on a rack. Cover with plastic wrap and refrigerate overnight before serving.",
+		"To remove the cake from the pan, run a knife or offset spatula around the edges to release the edges from the pan. Open the springform pan and remove the ring.",
+		"Cut the cheesecake into wedges and serve with berries or a raspberry sauce if desired."],
+	"time" : 80,
+	"reference" : "https://www.foodnetwork.com/recipes/food-network-kitchen/cheesecake-recipe2-2011459",
+	"image" : "https://cdn.discordapp.com/attachments/903804980719407154/963873441709166642/PXL_20220413_183855027.jpg"
+}, {
+	"name" : "Chili",
+	"ingredients" : ["olive oil", "onion", "ground beef", "chili powder", "cumin", "sugar", "tomato paste", "garlic powder", "salt", "black pepper", "cayenne pepper", "beef broth", "tomato", "kidney bean", "tomato sauce"],
+	"steps" : ["Add the olive oil to a large soup pot and place it over medium-high heat for two minutes. Add the onion. Cook for 5 minutes, stirring occasionally.",
+		"Add the ground beef to the pot. Break it apart with a wooden spoon. Cook for 6-7 minutes, until the beef is browned, stirring occasionally.",
+		"Add the chili powder, cumin, sugar, tomato paste, garlic powder, salt, pepper, and optional cayenne. Stir until well combined.",
+		"Add the broth, diced tomatoes (with their juice), drained beans, and tomato sauce. Stir well.",
+		"Bring the liquid to a low boil. Then, reduce the heat (low to medium-low) to gently simmer the chili, uncovered, for 20-25 minutes, stirring occasionally.",
+		"Remove the pot from the heat. Let the chili rest for 5-10 minutes before serving."],
+	"time" : 30,
+	"reference" : "https://www.thewholesomedish.com/the-best-classic-chili/",
+	"image" : "https://www.thewholesomedish.com/wp-content/uploads/2018/05/The-Best-Classic-Chili-550-150x150.jpg"
+}, {
+	"name" : "Hambuger Patty",
+	"ingredients" : ["ground beef", "saltine cracker", "egg", "worcestershire sauce", "milk", "salt", "garlic powder", "onion powder", "black pepper"],
+	"steps" : ["Set out a large mixing bowl. Add in the ground beef, crushed crackers, egg, Worcestershire sauce, milk, salt, garlic powder, onion powder, and pepper. Mix by hand until the meat mixture is smooth, but stop once the mixture looks even. (Overmixing can create a dense heavy texture.)",
+		"Press the meat down in the bowl, into an even disk. Use a knife to cut and divide the hamburger patty mixture into 6 – 1/3 pound grill or skillet patties, or 12 thin griddle patties.",
+		"Set out a baking sheet, lined with wax paper or foil, to hold the patties. One at a time, gather the patty mix and press firmly into patties. Shape them just slightly larger than the buns you plan to use, to account for shrinkage during cooking. Set the patties on the baking sheet. Use a spoon to press a dent in the center of each patty so they don't puff up as they cook. If you need to stack the patties separate them with a sheet of wax paper.",
+		"Preheat the grill or a skillet to medium heat. (Approximately 350-400 degrees F.)",
+		"For thick patties: Grill or fry the patties for 3-4 minutes per side.",
+		"For thin patties: Cook on the griddle for 2 minutes per side.",
+		"Stack the hot patties on hamburgers buns, and top with your favorite hamburgers toppings. Serve warm."],
+	"time" : 23,
+	"reference" : "https://www.aspicyperspective.com/best-hamburger-patty-recipe/",
+	"image" : "https://i0.wp.com/www.aspicyperspective.com/wp-content/uploads/2020/07/best-hamburger-patties-1.jpg?resize=200%2C166&ssl=1"
 }
 ]
