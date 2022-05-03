@@ -107,7 +107,7 @@ $(document).ready(function() {
 				+ response.recipe.image + '" style = "min-width:25rem"></image>')
 
 				// Adding the source to the end of the page
-				source.append(response.recipe.reference);
+				source.append("<a href= " + response.recipe.reference + " target= '_blank' >" + response.recipe.reference + "</a>");
 			},
 			// if Entry doesn't match anything in database
 			error: function(XMLHttpRequest, textStatus, errorThrown) {
